@@ -4,13 +4,12 @@ metadata:
   name: surfersapi
   labels:
     apps.tanzu.vmware.com/workload-type: web
-    deployment-model: blue-green
+    #deployment-model: blue-green
     app.kubernetes.io/part-of: surferslookout
-    apps.tanzu.vmware.com/has-tests: "true"
+    apps.tanzu.vmware.com/has-tests: "false"
     apps.tanzu.vmware.com/language: python
     apis.apps.tanzu.vmware.com/register-api: "true"
     component: backend
-    is-accelerator: "true"
 spec:
   params:
   - name: clusterBuilder
@@ -40,6 +39,7 @@ spec:
     value: davidlloyd0@gmail.com
   - name: git_user_name
     value: davlloyd
+
   source:
     git:
       url: https://github.com/davlloyd/surfers-api
