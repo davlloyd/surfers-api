@@ -34,7 +34,7 @@ spec:
       location:
         path: "/api/v1/api-docs"
       owner: group:surfers-crew
-      system: surferslookout
+      system: surfers-system
       description: "Surferslookout forecast api"
   - name: git_user_email
     value: davidlloyd0@gmail.com
