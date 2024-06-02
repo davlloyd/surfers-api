@@ -1,0 +1,12 @@
+
+apiVersion: supplychains.tanzu.vmware.com/v1alpha1
+kind: WebApp
+metadata:
+  name: surfersapi
+spec:
+  source:
+    git:
+      branch: "main"
+      url: "https://github.com/davlloyd/surfers-api.git"
+  carvel:
+    packageName: "surfersapi"

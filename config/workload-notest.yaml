@@ -17,16 +17,6 @@ spec:
   - name: testing_pipeline_matching_labels
     value:
       apps.tanzu.vmware.com/language: python
-  - name: annotations
-    value:
-      autoscaling.knative.dev/min-scale: "1"
-      autoscaling.knative.dev/max-scale: "50"
-      autoscaling.knative.dev/scale-down-delay: "2s"
-      autoscaling.knative.dev/initial-scale: "1"
-      autoscaling.knative.dev/window: "10s"
-      autoscaling.knative.dev/target: "40"
-      autoscaling.knative.dev/metric: "rps"
-      autoscaling.knative.dev/target: "50"
   - name: api_descriptor
     value:
       type: openapi
