@@ -1,5 +1,5 @@
 from enum import Enum, unique
-from surfersapi.logger import logger
+from main.logger import logger
 from . import web
 
 

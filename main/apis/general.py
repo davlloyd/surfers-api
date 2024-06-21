@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from surfersapi.config import settings
+from main.config import settings
 from pydantic import BaseModel
 
 

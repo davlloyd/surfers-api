@@ -1,5 +1,5 @@
 import pytest
-from surfersapi import create_app
+from main import create_app
 from fastapi.testclient import TestClient
 
 @pytest.fixture(scope="session")
@@ -10,7 +10,7 @@ def app():
 
 @pytest.fixture(scope='module')
 def new_feed(app):
-    from surfersapi.data.models import Feed
+    from main.data.models import Feed
     _feed = Feed(name='BOM',
                 location='sydney',
                 category='weather',

@@ -1,7 +1,7 @@
 import json
 from urllib.request import urlopen
 from urllib.error import URLError, HTTPError
-from surfersapi.logger import logger
+from main.logger import logger
 
 def get(url) -> json:
     logger.info(f"Reading API Get: {url}")

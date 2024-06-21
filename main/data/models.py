@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, Text
 from sqlalchemy.exc import IntegrityError
-from surfersapi.logger import logger
+from main.logger import logger
 from . import Base
 from . import SessionLocal
 

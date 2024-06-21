@@ -1,6 +1,6 @@
 import logging
 import os
-from surfersapi.config import settings
+from main.config import settings
 
 def __setupLogger():
     logger = logging.getLogger(__name__)

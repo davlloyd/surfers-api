@@ -1,6 +1,6 @@
 import feedparser
-from surfersapi.data.models import *
-from surfersapi.logger import logger
+from main.data.models import *
+from main.logger import logger
 
 def getWeather():
     logger.info('RSS Weather Request')

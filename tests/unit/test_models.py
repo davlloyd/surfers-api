@@ -1,4 +1,4 @@
-from surfersapi.data.models import Feed
+from main.data.models import Feed
 
 
 # Test to ensure a new record can be created from the models imported

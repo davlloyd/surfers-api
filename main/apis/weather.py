@@ -2,8 +2,8 @@ from fastapi import APIRouter
 from typing import List, Optional
 from pydantic import BaseModel
 from fastapi.responses import JSONResponse
-from surfersapi.services import feeds
-from surfersapi.services.bom import observations, locationsearch
+from main.services import feeds
+from main.services.bom import observations, locationsearch
 from .general import Message
 
 router = APIRouter(

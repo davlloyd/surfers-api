@@ -2,10 +2,10 @@ import json
 import os
 import sys
 from unicodedata import category
-from surfersapi.data.models import Feed
+from main.data.models import Feed
 from . import models, SessionLocal, Base
-from surfersapi.config import settings
-from surfersapi.logger import logger
+from main.config import settings
+from main.logger import logger
 
 
 
