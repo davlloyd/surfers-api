@@ -9,7 +9,7 @@ class BaseConfig:
     DATABASE_URL: str = os.environ.get('DATABASE_URL')
     DATABASE_TRACK_MODIFICATIONS: bool = False
     DATABASE_CONNECT_DICT: dict = {}
-    DATA_FILE: str =  f'{BASEDIR}/surfersapi/data/data.json'
+    DATA_FILE: str =  f'{BASEDIR}/main/data/data.json'
     USER_PORT: int = os.environ.get('USER_PORT', 8080)
     BASE_DIR: pathlib.Path = pathlib.Path(__file__).parent.parent
     CELERY_BROKER_URL: str = os.environ.get("CELERY_BROKER_URL", "redis://127.0.0.1:6379/0")            # NEW

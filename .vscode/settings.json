@@ -1,9 +1,11 @@
 {
     "tanzu.localPath": ".",
-    "tanzu.namespace": "alpha",
-    "tanzu.sourceImage": "us.gcr.io/lloyd-266015/supply-chain/surfersapi-source",
+    "tanzu.namespace": "beta",
     "python.autoComplete.extraPaths": [
         
     ],
-    "python.terminal.activateEnvironment": false
+    "python.terminal.activateEnvironment": false,
+    "tanzu.waitTimeout": "",
+    "tanzu.workloadType": "web",
+    "tanzu.confirmApplyConfig": false
 }
