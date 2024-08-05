@@ -5,7 +5,7 @@ from main.config import settings
 def __setupLogger():
     logger = logging.getLogger(__name__)
     logger.setLevel(logging.DEBUG)
-    fh = logging.FileHandler('surfersapi.log')
+    fh = logging.FileHandler('/tmp/surfersapi.log')
     fh.setLevel(logging.DEBUG)
     ch = logging.StreamHandler()
     ch.setLevel(logging.INFO)
