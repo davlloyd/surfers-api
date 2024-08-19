@@ -25,6 +25,7 @@ def readFeed(url, location):
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0'
         }
     _feed = feedparser.parse(url, request_headers=_headers)
+    logger.info(f"Feed Response: {_feed}")
     _response = None
     for _entry in _feed.entries:
         logger.info("RSS entry keys: {}".format(_entry.keys()))

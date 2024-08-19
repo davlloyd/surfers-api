@@ -10,3 +10,4 @@ lru_cache
 celery
 requests
 httpx
+pymysql
