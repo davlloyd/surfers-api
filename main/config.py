@@ -20,12 +20,15 @@ class BaseConfig:
 
     if 'VCAP_SERVICES' in os.environ:
         _vcap_services = json.loads(os.environ['VCAP_SERVICES'])
-        _mysql_srv = _vcap_services['p.mysql'][0]
-        _cred = _mysql_srv['credentials']
-        if _cred:
-            DATABASE_URL = f"mysql+pymysql://{_cred['username']}:{_cred['password']}@{_cred['hostname']}:{_cred['port']}/{_cred['name']}"
+        if len(_vcap_services) > 0 and 'p.mysql' in _vcap_services[0]:
+            _mysql_srv = _vcap_services['p.mysql'][0]
+            _cred = _mysql_srv['credentials']
+            if _cred:
+                DATABASE_URL = f"mysql+pymysql://{_cred['username']}:{_cred['password']}@{_cred['hostname']}:{_cred['port']}/{_cred['name']}"
+            else:
+                print("VCAP_SERVICES present but no db binding detected")
         else:
-            print("VCAP_SERVICES present but no db binding detected")
+            DATABASE_URL = 'sqlite:///' + os.path.join(BASEDIR, 'data.sqlite')
     else:
         try:
             _sb = binding.ServiceBinding()
